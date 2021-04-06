@@ -99,6 +99,16 @@ resource "helm_release" "agones" {
   }
 
   set {
+    name = "agones.metrics.prometheusEnabled"
+    value = var.prometheus_enabled
+  }
+
+  set {
+    name = "agones.metrics.prometheusServiceDiscovery"
+    value = var.prometheus_service_discovery
+  }
+
+  set {
     name  = "gameservers.namespaces"
     value = "{${join(",", var.gameserver_namespaces)}}"
   }

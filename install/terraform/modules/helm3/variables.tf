@@ -84,3 +84,11 @@ variable "gameserver_namespaces" {
   default = ["default"]
   type = list(string)
 }
+
+variable "prometheus_enabled" {
+  default = "false"
+}
+
+variable "prometheus_service_discovery" {
+  default = "false"
+}

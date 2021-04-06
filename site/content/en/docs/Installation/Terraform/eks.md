@@ -43,6 +43,10 @@ Configurable parameters:
 - gameserver_maxPort - the upper bound of the port range which gameservers will listen on (default is "8000")
 - gameserver_namespaces - a list of namespaces which will be used to run gameservers (default is `["default"]`). For example `["default", "xbox-gameservers", "mobile-gameservers"]`
 - force_update - whether or not to force the replacement/update of resource (default is true, false may be required to prevent immutability errors when updating the configuration)
+{{% feature publishVersion="1.14.0" %}}
+- prometheus_enabled - enable prometheus metrics (default is disabled "false")
+- prometheus_service_discovery - enable prometheus service discovery (default is disabled "false)
+{{% /feature %}}
 
 Now you can create an EKS cluster and deploy Agones on EKS:
 ```
